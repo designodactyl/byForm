@@ -8,11 +8,7 @@ Custom template using elements of HTML5 boilerplate + Joel Longie Gulp.js Build 
   git clone https://github.com/designodactyl/_template.git
   ```
 
-3. Create new git repo.
-
-  ```
-  https://github.com
-  ```
+3. Create new git repo at https://github.com
 
 4. Copy repo URL.
 
