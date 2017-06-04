@@ -39,3 +39,5 @@ Custom template using elements of HTML5 boilerplate + Joel Longie Gulp.js Build 
 	git commit -m “Git test“  
 	git push
   ```
+
+Note. Where "atom" can be replace in the above code with any editor. 
