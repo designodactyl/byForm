@@ -40,4 +40,4 @@ Custom template using elements of HTML5 boilerplate + Joel Longie Gulp.js Build 
 	git push
   ```
 
-Note. Where "atom" can be replace in the above code with any editor. 
+*Note: "atom" can be replaced in the above code with any editor name.*
