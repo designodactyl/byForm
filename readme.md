@@ -9,29 +9,34 @@ Custom template using elements of HTML5 boilerplate + Joel Longie Gulp.js Build 
   ```
 
 3. Create new git repo.
-	```
+
+  ```
   https://github.com
   ```
 
 4. Copy repo URL.
 
-5. Set cloned repo to push to new repo
-	```
+5. Set cloned repo to push to new repo.
+
+  ```
   git remote set-url origin https://github.com/designodactyl/PROJECT NAME.git
   ```
 
 6. in terminal run
-	```
+
+  ```
   Gulp
   ```
 
 7. Check everything is working.
+
   ```
 	atom index.html  [edit and page should auto update]
 	ctrl + c [exit gulp]
   ```
 
 8. Check Git is set up ok.
+
   ```
 	atom readme.md [edit]
 	git add .
