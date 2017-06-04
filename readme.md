@@ -1,24 +1,24 @@
 Custom template using elements of HTML5 boilerplate + Joel Longie Gulp.js Build system https://www.youtube.com/watch?v=LmdT2zhFmn4
 
 
-1. Clone  repo
-2. Rename to project name.
-
+1. Clone this repo.
   ```
   git clone https://github.com/designodactyl/_template.git
   ```
 
+2. Rename *_template* folder to your project name.
+
 3. Create new git repo at https://github.com
 
-4. Copy repo URL.
+4. Copy your new repo URL.
 
-5. Set cloned repo to push to new repo.
+5. Set the cloned *_template* repo to push to your new repo.
 
   ```
-  git remote set-url origin https://github.com/designodactyl/PROJECT NAME.git
+  git remote set-url origin https://github.com/designodactyl/NEW PROJECT NAME.git
   ```
 
-6. in terminal run
+6. Now run
 
   ```
   Gulp
