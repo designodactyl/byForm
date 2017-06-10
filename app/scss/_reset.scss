@@ -1,16 +1,18 @@
 * {
   box-sizing: border-box;
 }
-
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
 }
 body {
     margin: 0;
     font: 50px/1 sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. //
+    -webkit-text-size-adjust: 100%;
 }
 h1,
 h2,
@@ -24,6 +26,14 @@ ul {
     margin: 0;
     padding: 0;
 }
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section
 main,
 li {
     display: block;
