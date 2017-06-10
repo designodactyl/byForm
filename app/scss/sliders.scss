@@ -1,0 +1,62 @@
+#sliders {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#info,
+#project,
+#archive {
+  position: absolute;
+  padding: 3rem 8rem 3rem 7rem;
+}
+
+#archive {
+  background: $light-grey;
+  z-index: 2;
+}
+
+#project {
+  width: $size-b;
+  background: $white;
+  z-index: 3;
+}
+
+#info {
+  background: $dark-grey;
+  color: $white;
+  z-index: 4;
+}
+ 
+.info-open,
+.info-closed,
+.archive-open,
+.archive-closed
+{
+	width: $size-a;
+}
+
+.info-open {
+	right: 0;
+}
+
+.info-closed {
+	right: calc(-#{$size-a} + 5rem);
+}
+
+.archive-open,
+.project-open {
+	right: 0;
+}
+
+.archive-closed {
+	right: calc(-#{$size-a} + 10rem);
+}
+
+.project-closed {
+	right: -$size-b;
+}
+
+.archive-project-open {
+	width: calc(#{$size-b} + 5rem);
+}
