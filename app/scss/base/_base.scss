@@ -1,0 +1,76 @@
+//////////////////////////////////////////////////
+// Typefaces
+//////////////////////////////////////////////////
+@font-face {
+	font-family: 'GT America';
+	src: url('../font/GTAmerica-Regular.eot');
+	src: url('../font/GTAmerica-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../font/GTAmerica-Regular.woff') format('woff'),
+		url('../font/GTAmerica-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GT America Expanded';
+	src: url('../font/GTAmerica-ExpandedBold.eot');
+	src: url('../font/GTAmerica-ExpandedBold.eot?#iefix') format('embedded-opentype'),
+		url('../font/GTAmerica-ExpandedBold.woff') format('woff'),
+		url('../font/GTAmerica-ExpandedBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GT America Mono';
+	src: url('../font/GTAmericaMono-Regular.eot');
+	src: url('../font/GTAmericaMono-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../font/GTAmericaMono-Regular.woff') format('woff'),
+		url('../font/GTAmericaMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//////////////////////////////////////////////////
+// Type styles
+//////////////////////////////////////////////////
+$gt-reg: 'GT America', sans-serif;
+$gt-mono: 'GT America Mono', monospace;
+$gt-expanded: 'GT America Expanded', sans-serif;
+
+$h1: 2.0rem/2.6rem $gt-reg;
+$h2: 3.0rem/3.6rem $gt-reg;
+$h3: 2.0rem/2.6rem $gt-reg;
+$p:  2.0rem/2.6rem $gt-reg;
+
+$details: 1.5rem/2rem $gt-reg;
+
+//////////////////////////////////////////////////
+// Colours
+//////////////////////////////////////////////////
+$white: #fff;
+$black: rgb(15, 15, 20);
+$dark-grey: rgb(30, 30, 35);
+$light-grey: rgb(220, 220, 220);
+
+//////////////////////////////////////////////////
+// Dimensions
+//////////////////////////////////////////////////
+$size-a: 62.5%;
+$size-b: 80%;
+
+$space-1: 3rem;
+$space-2: 6rem;
+$space-3: 9rem;
+
+$strip: 5rem;
+$gutter: 2rem;
+
+//////////////////////////////////////////////////
+// Global Styles
+//////////////////////////////////////////////////
+body {
+	background: $black;
+	font: $p;
+	overflow: hidden;
+}

@@ -9,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  font: 22px/1 sans-serif;
+  font: 20px/1 sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
@@ -81,30 +81,63 @@ img {
   border: 0;
   vertical-align: middle; }
 
+@font-face {
+  font-family: 'GT America';
+  src: url("../font/GTAmerica-Regular.eot");
+  src: url("../font/GTAmerica-Regular.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-Regular.woff") format("woff"), url("../font/GTAmerica-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT America Expanded';
+  src: url("../font/GTAmerica-ExpandedBold.eot");
+  src: url("../font/GTAmerica-ExpandedBold.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-ExpandedBold.woff") format("woff"), url("../font/GTAmerica-ExpandedBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT America Mono';
+  src: url("../font/GTAmericaMono-Regular.eot");
+  src: url("../font/GTAmericaMono-Regular.eot?#iefix") format("embedded-opentype"), url("../font/GTAmericaMono-Regular.woff") format("woff"), url("../font/GTAmericaMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background: #0f0f14;
+  font: 2rem/2.6rem "GT America", sans-serif;
   overflow: hidden; }
 
-section {
-  height: 100vh; }
+h1 {
+  font: 2rem/2.6rem "GT America", sans-serif;
+  text-indent: 9rem;
+  margin-top: -0.5rem; }
+
+h2 {
+  font: 3rem/3.6rem "GT America", sans-serif;
+  margin-bottom: 6rem; }
+
+h3 {
+  font: 2rem/2.6rem "GT America", sans-serif;
+  text-indent: 9rem;
+  margin-top: -0.5rem; }
+
+p {
+  font: 2rem/2.6rem "GT America", sans-serif;
+  margin-top: -0.5rem;
+  margin-bottom: 3rem; }
+
+h4 {
+  font: 1.5rem/2rem "GT America", sans-serif; }
 
 #sliders {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  float: right; }
 
 #info,
 #project,
 #archive {
-  position: absolute;
-  padding: 3rem 8rem 3rem 7rem; }
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto; }
 
 #archive {
   background: gainsboro;
@@ -118,7 +151,10 @@ section {
 #info {
   background: #1e1e23;
   color: #fff;
-  z-index: 4; }
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .info-open,
 .info-closed,
@@ -143,4 +179,42 @@ section {
   right: -80%; }
 
 .archive-project-open {
-  width: calc(80% + 5rem); }
+  width: calc(80% + 5rem);
+  right: 0; }
+
+.strip {
+  width: 5rem;
+  height: 100%;
+  background: url("../img/favi.ico") 1.25rem 3rem no-repeat;
+  background-size: 2.5rem; }
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  padding: 3rem 3rem 3rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.intro {
+  padding-right: calc(33% + 2rem); }
+
+.text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin-right: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font: 1.5rem/2rem "GT America", sans-serif; }

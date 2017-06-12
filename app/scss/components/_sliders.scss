@@ -1,14 +1,13 @@
 #sliders {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  float:right;
 }
 
 #info,
 #project,
 #archive {
-  position: absolute;
-  padding: 3rem 8rem 3rem 7rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 #archive {
@@ -26,8 +25,9 @@
   background: $dark-grey;
   color: $white;
   z-index: 4;
+  display: flex;
 }
- 
+
 .info-open,
 .info-closed,
 .archive-open,
@@ -59,4 +59,39 @@
 
 .archive-project-open {
 	width: calc(#{$size-b} + 5rem);
+  right: 0;
+}
+
+.strip {
+  width: $strip;
+  height: 100%;
+  background: url("../img/favi.ico") 1.25rem $space-1 no-repeat;
+  background-size: 2.5rem;
+}
+
+.main {
+  flex: 1;
+  height: 100%;
+  padding: $space-1 $space-1 $space-1 $gutter;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.intro{
+  padding-right: calc(33% + #{$gutter});
+}
+
+.text {
+  flex: 2;
+  margin-right: $gutter;
+  align-self: flex-start;
+}
+
+.contact {
+  flex: 1;
+  font: $details;
+}
+
+aside ul {
 }
