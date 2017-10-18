@@ -1,0 +1,121 @@
+.hero-image {
+  flex-basis: 100%;
+  margin-bottom: $space-1;
+}
+
+.details {
+  flex-basis: 40%;
+  font: $details;
+  text-transform: uppercase;
+  padding: 0 $space-2 0 $space-2;
+  display: flex;
+  flex-direction: column;
+}
+
+.details ul {
+  padding-bottom: $space-1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details ul li:nth-child(1n) {
+  flex-basis: 30%;
+}
+
+.details ul li:nth-child(2n) {
+  flex-basis: 70%;
+}
+
+.project-gallery {
+  margin: 0 $space-2 0 $space-2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project-gallery div {
+  margin-bottom: $gutter;
+}
+
+.img-full {
+  flex-basis: 100%;
+}
+
+.img-left,
+.img-right,
+.img-left-solo,
+.img-right-solo {
+  flex-basis: calc(50% - #{$gutter} / 2);
+}
+
+.img-left {
+  margin-right: $gutter;
+}
+
+.img-left-solo {
+  margin-right: calc(50% - #{$gutter} / 2);
+}
+
+.img-right-solo {
+  margin-left: calc(50% + #{$gutter} / 2);
+}
+
+.project-carousel {
+  width: 100%;
+  margin: 0 0 $gutter $space-2;
+}
+
+.project-carousel div {
+  margin-bottom: 0!important;
+}
+
+.project-carousel img {
+  width: 37.5%;
+  margin-right: $gutter;
+}
+
+.related-carousel {
+  width: 100%;
+  border-top: 1px solid $dark-grey;
+  margin-top: $space-4;
+  padding: $space-1 $space-1 $space-3 0;
+}
+
+.related-carousel img {
+  width: 100%;
+}
+
+.related-project {
+  padding-left: $gutter;
+  width: 27.5%;
+}
+
+.related-project:last-child {
+  width: calc(27.5% + 2rem);
+  padding-right: 2rem;
+}
+
+.related-project:hover {
+  transform: scale(0.985, 0.985);
+}
+
+.related-project:hover > a ul:after {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.related-project ul {
+  padding-bottom: $space-2;
+}
+
+.related-project ul:after {
+  content: "View project  →";
+  opacity: 0;
+  transition: all 0.1s ease;
+  transform: translateY($caption);
+}
+
+.digital {
+  padding: $space-1;
+  background-color: $rich-black;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Always force latest IE rendering engine (even in intranet) -->
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Important stuff for SEO, don't neglect. (And don't dupicate values across your site!) -->
+  	<title>Form</title>
+  	<meta name="author" content="Dan Flynn" />
+  	<meta name="description" content="A selection of commissioned and collaborative work by Dan Flynn." />
+    <!-- Don't forget to set your site up: http://google.com/webmasters -->
+  	<meta name="google-site-verification" content="" />
+  	<meta name="Copyright" content="Dan Flynn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon & Stylesheet -->
+    <link rel="shortcut icon" href="img/favi.ico" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- Modernizr. Add latest build if needed
+    <script src="js/libs/modernizr.min.js" type="text/javascript"></script>
+    -->
+    <!-- Twitter: see https://dev.twitter.com/docs/cards/types/summary-card for details -->
+  	<meta name="twitter:card" content="summary" />
+  	<meta name="twitter:site" content="@function_Form" />
+  	<meta name="twitter:title" content="Form" />
+  	<meta name="twitter:description" content="A selection of commissioned and collaborative work by Dan Flynn." />
+  	<meta name="twitter:url" content="http://url.com/img/socialcard" />
+  	<!-- Facebook (and some others) use the Open Graph protocol: see http://ogp.me/ for details -->
+  	<meta property="og:title" content="Form" />
+  	<meta property="og:description" content="A selection of commissioned and collaborative work by Dan Flynn." />
+  	<meta property="og:url" content="http://byForm.co/" />
+  	<meta property="og:image" content="http://url.com/img/socialcard" />
+
+    <script>
+
+    function sendPROJECT(event) {
+      event.preventDefault();
+      var thisLink = event.currentTarget.getAttribute( 'href' );
+
+      setTimeout ( function() {
+      $.get(( thisLink ),
+        function (url){
+          $( '.project-loadspot' ).html( url );
+          $( '.project-loadspot' ).toggleClass( 'opacity' );
+          $.getScript({
+            url: "js/carousel.js",
+            cache: true
+          });
+        });
+      }, 300 )
+      //return false;
+    };
+
+    function sendARCHIVE(event) {
+      event.preventDefault();
+      $.get( (event.currentTarget.getAttribute('href') ),
+        function(url){
+          $( '.archive-loadspot' ).html(url);
+          $.getScript({
+            url: "js/carousel.js",
+            cache: true
+          });
+        });
+      return false;
+    };
+
+    function sendINFO(event) {
+      event.preventDefault();
+      $.get( (event.currentTarget.getAttribute('href') ),
+        function(url){
+          $( '.info-loadspot' ).html(url);
+        });
+      return false;
+    };
+
+  </script>
+  </head>
+
+  <body>
+    <!-- Main Page content -->
+    <header>
+      <div class="closer">
+      </div>
+      <ul>
+        <li class="header-title" >
+          <a href="index.html">
+            F03
+          </a>
+        </li>
+        <li class="header-selected">
+          <a href="#" id="selected-work" >
+            <div>&#x2192;</div>
+            Selected work
+          </a>
+        </li>
+        <li class="header-contact" >
+          <p>A selection of commissioned and collaborative projects focusing on the intersection of identity, digital and motion design.</p>
+        </li>
+      </ul>
+    </header>
+    <main id="image-index" >
+      <div id="index-hero" class="orange-red">
+        <section class="blackform"></section>
+
+        <div class="orange-projects goto">
+          <ul class="orange-thumb large" href="agi.html" onclick="sendPROJECT(event)">
+            <li>2017</li>
+            <li>Digital, Identity</li>
+            <li><img src="../img/AGI-homepage-2.jpg"></li>
+            <li>17.1</li>
+            <li>Alliance Graphique Internationale</li>
+          </ul>
+
+          <ul class="orange-thumb small" href="agi.html" onclick="sendPROJECT(event)">
+            <li>2017</li>
+            <li>Digital, Identity</li>
+            <li><img src="../img/bb-wines-logo.jpg"></li>
+            <li>16.4</li>
+            <li>Bill Byron Wines</li>
+          </ul>
+
+          <ul class="orange-thumb small push" href="agi.html" onclick="sendPROJECT(event)">
+            <li>2017</li>
+            <li>Digital, Identity</li>
+            <li ><img src="../img/ubank-debit-card-2-up-2.jpg"></li>
+            <li>17.1</li>
+            <li>UBANK</li>
+          </ul>
+
+          <ul class="orange-thumb large" href="agi.html" onclick="sendPROJECT(event)">
+            <li>2017</li>
+            <li>Digital, Identity</li>
+            <li><img src="../img/Matter-icon-loop-blue.gif"></li>
+            <li>17.1</li>
+            <li>Matter</li>
+          </ul>
+
+          <ul class="orange-thumb large push" href="agi.html" onclick="sendPROJECT(event)">
+            <li>2017</li>
+            <li>Digital, Identity</li>
+            <li><img src="../img/AGI-homepage-2.jpg"></li>
+            <li>17.1</li>
+            <li>Alliance Graphique Internationale</li>
+          </ul>
+
+          <ul class="orange-thumb small" href="agi.html" onclick="sendPROJECT(event)">
+            <li>2017</li>
+            <li>Digital, Identity</li>
+            <li><img src="../img/bb-wines-logo.jpg"></li>
+            <li>16.4</li>
+            <li>Bill Byron Wines</li>
+          </ul>
+
+        </div>
+      </div>
+    </main>
+    <!-- Mobile Buttons -->
+    <button id="info-button" class="orange-red-inverse" href="info.html" onclick="sendINFO(event)"><p>About</p></button>
+    <button id="archive-button" class="orange-red-inverse" href="archive.html" onclick="sendARCHIVE(event)"><p>Index</p></button>
+    <button id="project-button" class="orange-red-inverse" ><p>Close</p></button>
+    <!-- Sliders -->
+    <div id="sliders">
+    <!-- Archive Slider -->
+      <div id="archive" class="orange-red">
+        <div class="strip" href="archive.html" onclick="sendARCHIVE(event)">
+          <div class="sideways"><span>Index</span></div>
+        </div>
+        <div class="archive-loadspot"></div>
+      </div>
+      <!-- Project Slider -->
+      <div id="project" class="orange-red">
+        <div class="strip">
+          <div class="sideways"><span>Project Name Here</span></div>
+        </div>
+        <div class="project-loadspot"></div>
+      </div>
+      <!-- Info Slider -->
+      <div id="info" class="orange-red">
+        <div class="strip" href="info.html" onclick="sendINFO(event)">
+          <div class="sideways"><span>About</span></div>
+        </div>
+        <div class="info-loadspot"></div>
+      </div>
+      <!-- End Info Slider -->
+    </div>
+
+    <!-- Jquery here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Local Jquery backup here, uncomment to use -->
+    <!-- <script>window.jQuery || document.write("<script src='/js/libs/jquery-XXXX.min.js'>\x3C/script>")</script> -->
+    <!-- Custom functions go here -->
+    <script src="js/libs/flickity.pkgd.min.js"></script>
+    <script src="js/libs/jquery.photoroller.min.js"></script>
+    <script src="js/main.min.js" type="text/javascript"></script>
+    <!-- <script>$(document).ready(initPage);</script> -->
+
+    <!-- Asynchronous google analytics; this is the official snippet.
+    	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXXX-XX', 'auto');
+      ga('send', 'pageview');
+    </script>
+    -->
+  </body>
+</html>

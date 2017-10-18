@@ -1,0 +1,49 @@
+header {
+  position: absolute;
+  padding: $gutter 4rem 0 $space-1;
+//  height: 6rem;
+  width: calc(100vw - 10rem);
+  line-height: 1rem;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-up {
+    top: -6rem;
+}
+
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header ul li{
+  flex-basis: calc(33.333% - 1.333rem);
+}
+
+.header-title a {
+  font-family: $gt-mono;
+}
+
+.header-selected {
+  margin-left: 4rem;
+}
+
+.header-selected div {
+  height: 1rem;
+  width: 1rem;
+  font-family: $gt-mono;
+  margin: 0 0 -1rem -2rem;
+}
+
+.header-selected a:hover > div {
+  margin-left: -1.7rem;
+  transform: rotate(90deg);
+}
+
+/********** HEADER TRANSITIONS **********/
+
+.header-selected div {
+  transition: all 0.2s ease;
+}

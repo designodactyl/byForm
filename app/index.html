@@ -5,7 +5,7 @@
     <!-- Always force latest IE rendering engine (even in intranet) -->
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Important stuff for SEO, don't neglect. (And don't dupicate values across your site!) -->
-  	<title>FORM</title>
+  	<title>Form</title>
   	<meta name="author" content="Dan Flynn" />
   	<meta name="description" content="A selection of commissioned and collaborative work by Dan Flynn." />
     <!-- Don't forget to set your site up: http://google.com/webmasters -->
@@ -20,75 +20,220 @@
     -->
     <!-- Twitter: see https://dev.twitter.com/docs/cards/types/summary-card for details -->
   	<meta name="twitter:card" content="summary" />
-  	<meta name="twitter:site" content="@function_form" />
-  	<meta name="twitter:title" content="FORM" />
+  	<meta name="twitter:site" content="@function_Form" />
+  	<meta name="twitter:title" content="Form" />
   	<meta name="twitter:description" content="A selection of commissioned and collaborative work by Dan Flynn." />
   	<meta name="twitter:url" content="http://url.com/img/socialcard" />
   	<!-- Facebook (and some others) use the Open Graph protocol: see http://ogp.me/ for details -->
-  	<meta property="og:title" content="FORM" />
+  	<meta property="og:title" content="Form" />
   	<meta property="og:description" content="A selection of commissioned and collaborative work by Dan Flynn." />
-  	<meta property="og:url" content="http://byform.co/" />
+  	<meta property="og:url" content="http://byForm.co/" />
   	<meta property="og:image" content="http://url.com/img/socialcard" />
+
+    <script>
+
+    function sendPROJECT(event) {
+      event.preventDefault();
+      var thisLink = event.currentTarget.getAttribute( 'href' );
+
+      setTimeout ( function() {
+      $.get(( thisLink ),
+        function (url){
+          $( '.project-loadspot' ).html( url );
+          $( '.project-loadspot' ).toggleClass( 'opacity' );
+          $.getScript({
+            url: "js/carousel.js",
+            cache: true
+          });
+        });
+      }, 300 )
+      //return false;
+    };
+
+    function sendARCHIVE(event) {
+      event.preventDefault();
+      $.get( (event.currentTarget.getAttribute('href') ),
+        function(url){
+          $( '.archive-loadspot' ).html(url);
+          $.getScript({
+            url: "js/carousel.js",
+            cache: true
+          });
+        });
+      return false;
+    };
+
+    function sendINFO(event) {
+      event.preventDefault();
+      $.get( (event.currentTarget.getAttribute('href') ),
+        function(url){
+          $( '.info-loadspot' ).html(url);
+        });
+      return false;
+    };
+
+  </script>
   </head>
 
   <body>
     <!-- Main Page content -->
-  <!--<div id="text-index">
-      <h1>Text index</h1>
-    </div>
+    <header>
+      <div class="closer">
+      </div>
+      <ul>
+        <li class="header-title" >
+          <a href="index02.html">
+            F01
+          </a>
+        </li>
+        <li class="header-selected">
+          <a href="#" id="selected-work" >
+            <div>&#x2192;</div>
+            Selected work
+          </a>
+        </li>
+        <li class="header-contact">
+          <p>A selection of commissioned and collaborative projects focusing on the intersection of identity, digital and motion design.</p>
+        </li>
+      </ul>
+    </header>
+    <main id="image-index">
 
-    <div id="image-index">
-      <h1>Image index</h1>
-    </div> -->
+      <div id="index-hero">
+        <section class="blackform">
 
+        </section>
+        <div class="main-carousel goto">
+          <a href="#"><img src="../img/AGI-homepage-2.jpg" alt="Alliance Graphique International"></a>
+          <a href="#"><img src="../img/google-zoo-business-cards-2up.jpg" alt="Google Zoo"></a>
+          <a href="#"><img src="../img/bb-wines-logo.jpg" alt="Bill Byron wines"></a>
+          <a href="#"><img src="../img/ubank-debit-card-2-up-2.jpg" alt="UBANK"></a>
+        </div>
+        <div class="carousel-caption">
+          <ul>
+            <li class="carousel-link">View Project</li>
+            <li class="caption"></li>
+            <li class="carousel-status"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="index-projects">
+        <ul class="project-thumb" href="agi.html" onclick="sendPROJECT(event)">
+          <li><img src="../img/ubank-debit-card-2-up-2.jpg"></li>
+          <li><img src="../img/ubank-forms.jpg"></li>
+          <li><img src="../img/ubank-debit-card-2-up-2.jpg"></li>
+          <li><img src="../img/ubank-forms.jpg"></li>
+          <ul>
+            <li>UBANK</li>
+            <li>Digital, Identity</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb" href="agi.html" onclick="sendPROJECT(event)">
+          <li><img src="../img/google-zoo-business-cards-2up.jpg"></li>
+          <li><img src="../img/google-zoo-suite.jpg"></li>
+          <li><img src="../img/google-zoo-logo-loop.gif"></li>
+          <li><img src="../img/google-zoo-business-cards-2up.jpg"></li>
+          <li><img src="../img/google-zoo-suite.jpg"></li>
+          <li><img src="../img/google-zoo-logo-loop.gif"></li>
+          <ul>
+            <li>Google Zoo</li>
+            <li>Digital, Identity</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/bb-wines-homepage-2.jpg"></li>
+          <li><img src="../img/bb-wines-business-cards.jpg"></li>
+          <li><img src="../img/bb-wines-logo.jpg"></li>
+          <li><img src="../img/bb-wines-homepage-2.jpg"></li>
+          <li><img src="../img/bb-wines-business-cards.jpg"></li>
+          <li><img src="../img/bb-wines-logo.jpg"></li>
+          <ul>
+            <li>Bill Byron wines</li>
+            <li>Digital, Identity, Motion</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/AGI-homepage-2.jpg"></li>
+          <ul>
+            <li>Bill Byron wines</li>
+            <li>Digital, Identity, Motion</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/ubank-debit-card-2-up-2.jpg"></li>
+          <ul>
+            <li>Google Zoo</li>
+            <li>Digital, Identity</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/google-zoo-logo-loop.gif"></li>
+          <ul>
+            <li>Google Zoo</li>
+            <li>Digital, Identity</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/bb-wines-homepage-2.jpg"></li>
+          <ul>
+            <li>Google Zoo</li>
+            <li>Digital, Identity</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/google-zoo-business-cards-2up.jpg"></li>
+          <ul>
+            <li>Google Zoo</li>
+            <li>Digital, Identity</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+        <ul class="project-thumb">
+          <li><img src="../img/AGI-homepage-2.jpg"></li>
+          <ul>
+            <li>Bill Byron wines</li>
+            <li>Digital, Identity, Motion</li>
+            <li>&#x21B3; 2017</li>
+          </ul>
+        </ul>
+      </div>
+    </main>
+    <!-- Mobile Buttons -->
+    <button id="info-button" href="info.html" onclick="sendINFO(event)"><p>About</p></button>
+    <button id="archive-button" href="archive.html" onclick="sendARCHIVE(event)"><p>Index</p></button>
+    <button id="project-button" ><p>Close</p></button>
+    <!-- Sliders -->
     <div id="sliders">
-      <div id="archive" class="archive-project-open">
-        <h1>Archive</h1>
+    <!-- Archive Slider -->
+      <div id="archive" >
+        <div class="strip" href="archive.html" onclick="sendARCHIVE(event)">
+          <div class="sideways"><span>Index</span></div>
+        </div>
+        <div class="archive-loadspot"></div>
       </div>
-
-      <div id="project" class="project-open">
-        <h1>Project page</h1>
+      <!-- Project Slider -->
+      <div id="project">
+        <div class="strip">
+          <div class="sideways"><span>Project Name Here</span></div>
+        </div>
+        <div class="project-loadspot"></div>
       </div>
-
-      <div id="info" class="info-open">
-        <div class="strip">&nbsp;</div>
-        <main class="main">
-
-          <section class="intro">
-            <h1>Information</h1>
-            <h2>A selection of commissioned and collaborative work by Dan Flynn. Currently Creative Director @Maud, Melbourne. Previously @SPIN, London.</h2>
-          </section>
-          <section class="text">
-            <h3>Work</h3>
-            <p>I have been fortunate enough to work on a diverse range of projects for clients big and small; including AGI, Delfina Foundation, Design Museum, Edmund de Waal, Foxtel, Google, Matthew Hilton and Wired.</p>
-
-            <h3>Bio</h3>
-            <p>Dan graduated from the Institute of Art, Design and Technology in 2009. Upon graduation he spent time at a number of Irish studios before moving to London to work at the acclaimed studio SPIN. In 2014 Dan moved to Australia, establishing a freelance practice. Having collaborated on a number of high profile jobs with MAUD, Dan now works as a Creative Director in the Sydney studio.</p>
-          </section>
-          <aside class="contact">
-            <ul>
-              <li><h4>CV</h4></li>
-              <li>Creative Director</li>
-              <li>MAUD, Sydney</li>
-              <li>2015—</li>
-
-              <li><h4>Senior Designer</h4></li>
-              <li>SPIN, London</li>
-              <li>2010—2014</li>
-
-              <li><h4>Intern</h4></li>
-              <li>Atelier David Smith, Detail &amp; Zero–G</li>
-              <li>2009—2010</li>
-            </ul>
-            <ul>
-              <li><h4>Contact</h4></li>
-              <li>info@byform.co</li>
-              <li>@function_form</li>
-              <li>+61 439 849 717</li>
-            </ul>
-          </aside>
-        </main>
+      <!-- Info Slider -->
+      <div id="info">
+        <div class="strip" href="info.html" onclick="sendINFO(event)">
+          <div class="sideways"><span>About</span></div>
+        </div>
+        <div class="info-loadspot"></div>
       </div>
+      <!-- End Info Slider -->
     </div>
 
     <!-- Jquery here -->
@@ -96,8 +241,10 @@
     <!-- Local Jquery backup here, uncomment to use -->
     <!-- <script>window.jQuery || document.write("<script src='/js/libs/jquery-XXXX.min.js'>\x3C/script>")</script> -->
     <!-- Custom functions go here -->
+    <script src="js/libs/flickity.pkgd.min.js"></script>
+    <script src="js/libs/jquery.photoroller.min.js"></script>
     <script src="js/main.min.js" type="text/javascript"></script>
-    <script>$(document).ready(initPage);</script>
+    <!-- <script>$(document).ready(initPage);</script> -->
 
     <!-- Asynchronous google analytics; this is the official snippet.
     	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.

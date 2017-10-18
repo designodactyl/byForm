@@ -1,0 +1,23 @@
+
+.photoroller {
+  position: relative;
+
+  .pr-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    img {
+      display: block;
+    }
+  }
+
+  .pr-active {
+    position: static;
+    display: block;
+    visibility: visible;
+  }
+
+}

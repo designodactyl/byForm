@@ -1,0 +1,51 @@
+.main {
+//  flex: 1;
+  padding: $space-1 0 $space-1 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+.intro {
+  padding-right: 45%;
+  margin-left: $space-2;
+  margin-bottom: $space-2;
+}
+
+.text {
+  flex-basis: 55%;
+  padding-left: $space-2;
+  margin-bottom: $space-3;
+  align-self: flex-start;
+}
+
+.contact {
+  flex-basis: 40%;
+  font: $details;
+  text-transform: uppercase;
+  padding: 0 $space-2 0 $space-2;
+
+  display: flex;
+  flex-flow: column;
+  align-content: flex-start;
+}
+
+aside div {
+  padding-bottom: $space-1;
+  display: flex;
+  align-content: flex-start;
+}
+
+aside div h4 {
+  flex: 1;
+  padding-right: $space-1;
+}
+
+aside div ul {
+  flex: 3;
+}
+
+aside div ul li:nth-child(3n) {
+  padding-bottom: 1rem;
+}

@@ -1,5 +1,5 @@
 #sliders {
-  float:right;
+ float: right;
 }
 
 #info,
@@ -8,90 +8,111 @@
   position: fixed;
   height: 100vh;
   overflow-y: auto;
+  border-left: 1px solid $black;
+  transition-property: right;
+  transition: 0.3s ease;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
+
 #archive {
-  background: $light-grey;
+  background: $white;
   z-index: 2;
+  top: 0;
+  right: calc(-#{$size-a} + 10rem);
+  overflow: visible;
 }
 
 #project {
   width: $size-b;
   background: $white;
   z-index: 3;
+  top: 0;
+  right: calc(-#{$size-b} + 0rem);
 }
 
 #info {
-  background: $dark-grey;
-  color: $white;
+  background: $white;
+  color: $black;
   z-index: 4;
-  display: flex;
+  top: 0;
+  right: calc(-#{$size-a} + 5rem);
 }
 
-.info-open,
-.info-closed,
-.archive-open,
-.archive-closed
+#info,
+#archive
 {
 	width: $size-a;
 }
 
-.info-open {
-	right: 0;
-}
-
-.info-closed {
-	right: calc(-#{$size-a} + 5rem);
-}
-
+.info-open,
 .archive-open,
 .project-open {
-	right: 0;
-}
-
-.archive-closed {
-	right: calc(-#{$size-a} + 10rem);
+	right: 0 !important;
 }
 
 .project-closed {
 	right: -$size-b;
 }
 
+.archive-open-more {
+  right: 5rem !important;
+}
+
+.archive-open-most {
+  right: calc(#{$size-b} - #{$size-a} + 5rem)!important;
+}
+
 .archive-project-open {
 	width: calc(#{$size-b} + 5rem);
-  right: 0;
+  right: 0 !important;
 }
 
 .strip {
   width: $strip;
   height: 100%;
-  background: url("../img/favi.ico") 1.25rem $space-1 no-repeat;
-  background-size: 2.5rem;
+  cursor: w-resize;
+  position: absolute;
+  padding: 1rem 0 0 0rem;
 }
 
-.main {
-  flex: 1;
+.sideways {
+  height: 2rem;
+  width: 20rem;
+  overflow: visible;
+  transform: rotate(90deg) translateY(7rem) translateX(10rem);
+  font-family: $gt-mono;
+  font-size: 1.5rem;
+}
+
+.sideways span {
+  text-transform: uppercase;
+  //line-height: 2.5rem
+}
+
+.sideways span:after {
+  content: "\2193";
+  padding-left: 0.5rem;
+}
+
+.cursor {
+  cursor: e-resize;
+}
+
+.project-loadspot {
+  transition: all .5s ease;
+  opacity: 0;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.scroll {
   height: 100%;
-  padding: $space-1 $space-1 $space-1 $gutter;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-
-.intro{
-  padding-right: calc(33% + #{$gutter});
-}
-
-.text {
-  flex: 2;
-  margin-right: $gutter;
-  align-self: flex-start;
-}
-
-.contact {
-  flex: 1;
-  font: $details;
-}
-
-aside ul {
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }

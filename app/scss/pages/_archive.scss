@@ -1,0 +1,118 @@
+
+.table {
+  flex: 2;
+  //margin-right: calc(#{$gutter} + 5rem);
+  align-self: flex-start;
+  padding-bottom: $space-3;
+  margin-left: $space-2;
+
+  will-change: opacity;
+}
+
+.columns:nth-child(1){
+  font-family: $gt-mono;
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 1.5rem;
+}
+
+.columns {
+  position: relative;
+  border-bottom: 0.1rem solid $black;
+  text-transform: uppercase;
+  //transition: all 0.3s ease;
+}
+
+.columns ul {
+  display: flex;
+  margin-right: $space-2;
+}
+
+.columns li {
+  padding: 0.8rem 2rem 1rem 0;
+}
+
+.columns li:nth-child(1) {
+  flex-basis: 9rem;
+}
+
+.columns li:nth-child(2) {
+  flex-basis: 45%;
+}
+
+.columns li:nth-child(3) {
+  flex-basis: 35%;
+}
+
+.columns li:nth-child(4) {
+  flex-basis: 10%;
+}
+
+.columns img {
+  display: none;
+}
+
+// .columns img {
+//   position: fixed;
+//   width: 30rem;
+//   z-index: 1;
+//   margin: -12rem 0 0 -32.5rem;
+//   display: none;
+//   opacity: 0;
+//   transition: all 0.3s ease;
+// }
+
+// .columns:hover > img {
+// //  transform: scale(1.05, 1.05);
+// //  display: block;
+//   opacity: 1;
+// }
+
+.columns:hover:not(:nth-child(1)) {
+  cursor: zoom-in;
+  border-bottom: 2px solid $black;
+  margin-bottom: -1px;
+}
+
+.columns a:hover {
+  cursor: zoom-in;
+}
+
+.columns a ul li:nth-child(1):before {
+  content: "\2192";
+  position: absolute;
+  opacity: 0;
+}
+
+.columns:hover > a ul li:nth-child(1):before {
+  opacity: 1;
+  margin-left: -2.5rem;
+}
+
+.columns:hover > a ul li:nth-child(1) {
+  padding-left: 2.25rem;
+}
+
+
+/********** ARCHIVE TRANSITIONS **********/
+
+.columns li:nth-child(1),
+.columns a ul li:nth-child(1):before {
+  transition: all 0.3s ease;
+}
+
+/*
+.columns a ul li:nth-child(1):before {
+  content: "";
+  float: left;
+  background-color: #000;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-right: 4px;
+  margin-top: 7px;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+*/

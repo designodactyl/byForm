@@ -2,7 +2,7 @@
 // Typefaces
 //////////////////////////////////////////////////
 @font-face {
-	font-family: 'GT America';
+	font-family: 'GT Merica';
 	src: url('../font/GTAmerica-Regular.eot');
 	src: url('../font/GTAmerica-Regular.eot?#iefix') format('embedded-opentype'),
 		url('../font/GTAmerica-Regular.woff') format('woff'),
@@ -12,7 +12,27 @@
 }
 
 @font-face {
-	font-family: 'GT America Expanded';
+	font-family: 'GT Merica Medium';
+	src: url('../font/GTAmerica-Medium.eot');
+	src: url('../font/GTAmerica-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../font/GTAmerica-Medium.woff') format('woff'),
+		url('../font/GTAmerica-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GT Merica Bold';
+	src: url('../font/GTAmerica-Bold.eot');
+	src: url('../font/GTAmerica-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../font/GTAmerica-Bold.woff') format('woff'),
+		url('../font/GTAmerica-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GT Merica Expanded';
 	src: url('../font/GTAmerica-ExpandedBold.eot');
 	src: url('../font/GTAmerica-ExpandedBold.eot?#iefix') format('embedded-opentype'),
 		url('../font/GTAmerica-ExpandedBold.woff') format('woff'),
@@ -22,7 +42,7 @@
 }
 
 @font-face {
-	font-family: 'GT America Mono';
+	font-family: 'GT Merica Mono';
 	src: url('../font/GTAmericaMono-Regular.eot');
 	src: url('../font/GTAmericaMono-Regular.eot?#iefix') format('embedded-opentype'),
 		url('../font/GTAmericaMono-Regular.woff') format('woff'),
@@ -31,46 +51,83 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'GT Merica Compressed';
+	src: url('../font/GTAmerica-CompressedMedium.eot');
+	src: url('../font/GTAmerica-CompressedMedium.eot?#iefix') format('embedded-opentype'),
+		url('../font/GTAmerica-CompressedMedium.woff') format('woff'),
+		url('../font/GTAmerica-CompressedMedium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 //////////////////////////////////////////////////
 // Type styles
 //////////////////////////////////////////////////
-$gt-reg: 'GT America', sans-serif;
-$gt-mono: 'GT America Mono', monospace;
-$gt-expanded: 'GT America Expanded', sans-serif;
+$gt-reg: 'GT Merica', sans-serif;
+$gt-med: 'GT Merica Medium', sans-serif;
+$gt-bold: 'GT Merica Bold', sans-serif;
+$gt-mono: 'GT Merica Mono', monospace;
+$gt-expanded: 'GT Merica Expanded', sans-serif;
+$gt-compressed: 'GT Merica Compressed', sans-serif;
 
-$h1: 2.0rem/2.6rem $gt-reg;
-$h2: 3.0rem/3.6rem $gt-reg;
-$h3: 2.0rem/2.6rem $gt-reg;
-$p:  2.0rem/2.6rem $gt-reg;
 
-$details: 1.5rem/2rem $gt-reg;
+$h1: 2.2rem/2.6rem $gt-reg;
+$h2: 3.4rem/3.7rem $gt-reg;
+$h3: 2.2rem/2.6rem $gt-reg;
+$p:  2.2rem/2.6rem $gt-reg;
+
+$details: 1.5rem/1.8rem $gt-mono;
 
 //////////////////////////////////////////////////
 // Colours
 //////////////////////////////////////////////////
 $white: #fff;
-$black: rgb(15, 15, 20);
-$dark-grey: rgb(30, 30, 35);
+$black: rgb(15, 15, 15);
+$dark-grey: rgb(35, 35, 35);
 $light-grey: rgb(220, 220, 220);
+$rich-black: rgb(0, 0, 0);
+$orangered: rgb(250, 95, 50);
+//$orangered: rgb(255, 125, 95);
 
 //////////////////////////////////////////////////
 // Dimensions
 //////////////////////////////////////////////////
-$size-a: 62.5%;
-$size-b: 80%;
+$size-a: 75%;
+$size-b: 85%;
+$size-c: 90%;
+$size-d: 100%;
 
 $space-1: 3rem;
 $space-2: 6rem;
 $space-3: 9rem;
+$space-4: 12rem;
+$space-5: 15rem;
 
 $strip: 5rem;
 $gutter: 2rem;
+$caption: 0.5rem;
+
 
 //////////////////////////////////////////////////
 // Global Styles
 //////////////////////////////////////////////////
+
+
 body {
 	background: $black;
 	font: $p;
-	overflow: hidden;
+	//overflow: hidden;
+	font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1;
+	hyphens: auto;
+	cursor: url(../img/cursor.png), auto;
+	-webkit-overflow-scrolling: touch;
+	//height: 100%;
 }
+
+::selection {
+	color: $white;
+  background: red;
+}
+
+$shadow: 0 5px 30px -5px rgba(0,0,0,5);

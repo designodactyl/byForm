@@ -20,5 +20,9 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "sass": "^0.5.0"
+  },
+  "dependencies": {
+    "flickity": "^2.0.9",
+    "graceful": "^1.0.1"
   }
 }

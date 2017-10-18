@@ -52,7 +52,6 @@ strong {
 a,
 button {
     color: inherit;
-    /* transition: .1s; */
 }
 a {
     text-decoration: none;
@@ -76,7 +75,7 @@ button {
     outline: 0;
 }
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border: 0;
     vertical-align: middle;

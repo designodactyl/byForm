@@ -1,0 +1,702 @@
+//////////////////////////////////////////////////
+// Desktop & Laptop
+//////////////////////////////////////////////////
+@media only screen  and (min-width : 1600px) {
+  body {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+    //background: red!important;
+  }
+
+  h1,
+  h3,
+  p {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  $details: 1.5rem/1.8rem $gt-mono;
+
+  .details,
+  .contact,
+  .sideways span,
+  .project-thumb ul,
+  .related-project ul,
+  .orange-thumb li:nth-child(1),
+  .orange-thumb li:nth-child(2),
+  .columns:nth-child(1),
+  h4
+  {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media only screen  and (max-width : 1200px) {
+
+  /* Header ----------- */
+  header ul li {
+    flex-basis: calc(25% - 1.333rem);
+  }
+
+  li.header-selected {
+    flex-basis: calc(25% - 1.333rem);
+  }
+
+  li.header-contact {
+    flex-basis: calc(50% - 1.333rem);
+  }
+
+  /* Sliders ----------- */
+  #info,
+  #archive {
+    width: calc(#{$size-c} - 5rem);
+  }
+
+  #info {
+    right: calc(-#{$size-c} + 10rem);
+  }
+
+  #archive {
+    right: calc(-#{$size-c} + 15rem);
+  }
+
+  #project {
+    width: $size-c;
+    right: -$size-c;
+  }
+
+  /* Archive ----------- */
+  .columns img {
+    margin: -12rem 0 0 40%;
+  }
+
+  .columns a ul li:nth-child(1):before {
+    content: "\2192\00a0";
+  }
+}
+
+//////////////////////////////////////////////////
+// Tablet – Landscape
+//////////////////////////////////////////////////
+@media only screen  and (max-width : 1024px) {
+
+  /* Big Type ----------- */
+  .big-type {
+    font-size: $space-3;
+    line-height: 9rem;
+  }
+
+  .big-type li span {
+    flex-basis: calc(25% - #{$gutter});
+  }
+
+  .big-type li a {
+    flex-basis: 75%;
+  }
+
+  /* Orange Projects ----------- */
+  .large {
+    flex-basis: calc(50% - #{$gutter} / 2);
+  }
+
+  .small {
+    flex-basis: calc(40% - #{$gutter} / 2);
+  }
+
+  .push {
+    margin-left: calc(5% - #{$gutter} / 2);
+    margin-right: calc(5% - #{$gutter} / 2);
+  }
+
+  /* Sliders ----------- */
+  #info,
+  #archive {
+    width: calc(#{$size-d} - 5rem);
+  }
+
+  #info {
+    right: calc(-#{$size-d} + 10rem);
+  }
+
+  #archive {
+    right: calc(-#{$size-d} + 15rem);
+  }
+
+  #project {
+    width: $size-d;
+    right: -$size-d;
+  }
+
+  .main-carousel img {
+    width: 75vw;
+    margin-right: $gutter;
+  }
+
+  .carousel-cell {
+    width: 75vw;
+  }
+
+  /* Big Type ----------- */
+  .big-type li img {
+    width: calc(50% - 10rem);
+    transform: translate(0, -15%);
+  }
+
+  .big-type li:hover > img {
+    width: calc(50% - 7.5rem);
+  }
+
+}
+
+//////////////////////////////////////////////////
+// Tablet – Landscape
+//////////////////////////////////////////////////
+@media only screen and (max-width : 950px) {
+
+  /* Header ----------- */
+  header ul li {
+    flex-basis: calc(25% - 1.333rem);
+    padding-bottom: 1rem;
+  }
+
+  li.header-selected {
+    display: none;
+    flex-basis: calc(65% - 1.333rem);
+    margin-left: auto;
+  }
+
+  li.header-contact {
+    flex-basis: calc(75% - 1.333rem);
+    margin-left: auto;
+  }
+
+  /* Image Index -------- */
+  #index-hero section {
+    min-height: calc(50vw - #{$space-3});
+  }
+
+  /* Info ----------- */
+  .intro {
+    padding-right: 10%;
+    margin-bottom: $space-1;
+  }
+
+  .text {
+    flex-basis: 90%;
+    margin-bottom: 0;
+  }
+
+  .contact, .details {
+    margin-top: $gutter;
+    margin-bottom: $space-3;
+    flex-basis: 90%;
+    flex-flow: row;
+  }
+
+  .details ul {
+    flex-basis: 50%;
+    align-content: flex-start;
+  }
+
+  aside div {
+    margin: 0 $gutter $space-2 0;
+    flex-basis: 50%;
+    //  flex-flow: column;
+  }
+
+  aside div h4,
+  aside div ul {
+    //  flex: 0;
+  }
+
+
+  /* Project overview ----------- */
+  #index-projects ul {
+    flex-basis: calc(50% - 1rem);
+  }
+
+  /* Archive----------- */
+
+  .table {
+    margin-top: $space-2;
+  }
+
+  .columns li:nth-child(1) {
+    flex-basis: $space-3;
+  }
+
+  .columns li:nth-child(2) {
+    flex-basis: 50%;
+  }
+
+  .columns li:nth-child(3) {
+    flex-basis: 50%;
+  }
+
+  .columns li:nth-child(4) {
+    display: none;
+  }
+
+  /* Orange Projects ----------- */
+
+  .orange-projects {
+    justify-content: space-between;
+    align-items: flex-start ;
+  }
+
+  .large {
+    flex-basis: calc(50% - #{$gutter} / 2);
+  }
+
+  .small {
+    flex-basis: calc(50% - #{$gutter} / 2);
+  }
+
+  .push {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .orange-thumb li:nth-child(4),
+  .orange-thumb li:nth-child(5) {
+    font: $h1;
+  }
+
+  /* Project page ----------- */
+  .hero-image{
+    margin: 0;
+  }
+
+
+}
+
+
+//////////////////////////////////////////////////
+// Tablet – Landscape
+//////////////////////////////////////////////////
+@media only screen and (max-width : 769px) {
+
+
+  /* Info ----------- */
+  .intro,
+  .contact {
+    flex-basis: 85%;
+    padding-right: $space-1;
+  }
+
+  .text {
+    padding-bottom:  $space-1;
+  }
+
+  .contact, .details {
+    margin: 0 0 $space-2 0;
+    flex-flow: column;
+  }
+
+  .details {
+    padding-right: $space-2;
+  }
+
+  .details ul{
+    padding-bottom: 0;
+  }
+
+
+  /* Project page ----------- */
+  .project-carousel img,
+  .related-project {
+    width: 60%;
+  }
+
+  .related-project:last-child {
+    width: calc(60% + 2rem);
+    padding-right: 2rem;
+  }
+
+  .digital {
+    padding: $space-1;
+    background-color: $black;
+  }
+
+  .text {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .details {
+    margin-bottom: $space-4;
+  }
+
+
+  /* Big Type ----------- */
+  .big-type {
+    font-size: $space-2;
+    line-height: 6rem;
+    color: $white;
+    text-shadow: none;
+  }
+}
+
+//////////////////////////////////////////////////
+// Tablet – Portrait
+//////////////////////////////////////////////////
+@media only screen  and (max-width : 650px) {
+
+  body {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    text-indent: $space-2;
+    margin-top: -0.5rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    text-indent: $space-2;
+    margin-top: -0.5rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .indent {
+    text-indent: $space-2;
+  }
+
+  .details,
+  .contact,
+  .sideways p,
+  .project-thumb ul,
+  .related-project ul,
+  .columns:nth-child(1),
+  .sideways
+  {
+    font-size: 1.3rem;
+  }
+
+
+  /* Header ----------- */
+
+  header ul li {
+    flex-basis: calc(15% - 1.333rem);
+  }
+
+  li.header-selected {
+    flex-basis: calc(70% - 1.333rem);
+  }
+
+  /* Project overview ----------- */
+  #index-projects ul {
+    flex-basis: 100%;
+  }
+
+  #index-hero section {
+    height: 20rem;
+  }
+
+
+  /* Image Index -------- */
+
+  .project-thumb {
+    margin-bottom: $gutter;
+  }
+
+  /* Info ----------- */
+  .intro,
+  .text,
+  .contact {
+    margin-bottom: $space-1;
+  }
+
+  .text {
+    margin-bottom: 0;
+  }
+
+  .contact, .details {
+    margin: 0 0 $space-3 0;
+    flex-flow: column;
+  }
+
+  .details {
+    padding-right: $space-2;
+  }
+
+  .details ul{
+    padding-bottom: 0;
+  }
+
+  /* Project page ----------- */
+  .digital {
+    padding: $gutter;
+    background-color: $rich-black;
+  }
+
+  .img-left,
+  .img-right,
+  .img-left-solo,
+  .img-right-solo {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  /* Archive ----------- */
+  .columns img {
+    right: 5rem;
+    margin: -12.5rem 0 0 .6rem;
+  }
+
+  .columns a ul li:nth-child(1):before {
+    content: "\2192\00a0";
+  }
+
+  .columns li:nth-child(1) {
+    flex-basis: $space-2;
+  }
+
+  /* Big Type ----------- */
+  .big-type {
+    font-size: $space-1;
+    line-height: 3rem;
+  }
+
+  /* Orange Projects ----------- */
+  .large {
+    flex-basis: 100%;
+  }
+
+  .small {
+    flex-basis: 100%;
+  }
+
+}
+
+
+//////////////////////////////////////////////////
+// PHONE & PHABLET
+//////////////////////////////////////////////////
+@media only screen  and (max-width : 500px) {
+
+  /* Header ----------- */
+  header ul li,
+  li.header-contact  {
+    flex-basis: 100%;
+  }
+
+  #index-hero {
+    width: auto;
+    margin:0;
+  }
+
+  header {
+    width: auto;
+    margin:0;
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  header {
+    //padding: $gutter $gutter 0 $gutter;
+  }
+
+  #index-hero section {
+    margin-left: $gutter;
+    margin-right: $gutter;
+    height: 20rem;
+    width: auto;
+  }
+
+  /* Sliders ----------- */
+  #info,
+  #archive,
+  #project {
+    width: 100%;
+  }
+
+  #info {
+    right: calc(-#{$size-c} - 5rem);
+  }
+
+  #archive {
+    right: calc(-#{$size-c} - 5rem);
+  }
+
+  #project {
+    // anyhting here?
+  }
+
+  #info-button,
+  #archive-button,
+  #project-button {
+    position: fixed;
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    font: $details;
+    transform: rotate(90deg) translateY(0rem) translateX(0rem);
+    transition: all 0.3s ease;
+    background: $black;
+    color: $white;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #info-button p,
+  #archive-button p,
+  #project-button p {
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+
+  #info-button p:after {
+    //content: "About"
+  }
+
+  #archive-button p:after {
+    //content: "Index";
+  }
+
+  #project-button p:after {
+    //content: "Close";
+  }
+
+  #info-button {
+    bottom: $gutter;
+    right: 1rem;
+    z-index: 5;
+  }
+
+  #archive-button {
+    bottom: 8rem;
+    right: 1rem;
+    z-index: 3;
+  }
+
+  #project-button {
+    bottom: 8rem;
+    right: -6rem;
+    z-index: 100;
+    transform: rotate(0deg) translateY(0rem) translateX(0rem)!important;
+  }
+
+  .show-button {
+    right: 1rem!important;
+    transform: rotate(90deg) translateY(0rem) translateX(0rem);
+  }
+
+  .rotate-close {
+    transform: rotate(0deg) translateY(0rem) translateX(0rem)!important;
+    content: "Close";
+  }
+
+  /* Information ----------- */
+  .intro,
+  .text,
+  .contact,
+  .details {
+    flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
+
+  .text {
+    margin-top: $space-1;
+  }
+
+  .details {
+    margin-bottom: $space-2;
+  }
+
+  /* Archive page----------- */
+  .table {
+    margin: 0;
+    margin-top: $space-2;
+  }
+
+  .columns {
+    padding-left: $gutter;
+  }
+
+  .columns ul {
+    margin-right: $gutter;
+  }
+
+
+  /* Project page----------- */
+  .strip {
+    display: none;
+  }
+
+  .project-gallery {
+    margin: 0 $gutter;
+  }
+
+  .project-carousel {
+    margin-left: $gutter;
+  }
+
+  .related-carousel {
+    padding-right: 0;
+  }
+
+  /* Image index ----------- */
+  #index-projects {
+    width: auto;
+    padding: $space-1 $gutter 0 $gutter;
+  }
+
+  /* Big Type ----------- */
+  .big-type {
+    font-size: $space-1;
+    line-height: 3rem;
+    padding: 0 0 1rem 0;
+  }
+
+  .big-type li {
+    padding: 1rem $gutter 1rem $gutter;
+  }
+
+  .big-type li:hover {
+      color: $light-grey
+  }
+
+  .big-type li img {
+    display: none;
+  }
+
+  /* Orange Type ----------- */
+  .orange-projects {
+    width: auto;
+    padding: $space-1 $gutter 0 $gutter;
+  }
+
+
+}

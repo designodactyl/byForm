@@ -1,0 +1,81 @@
+.orange-red {
+  color: $black !important;
+  background: $orangered !important;
+}
+
+.orange-red-inverse {
+  color: $orangered !important;
+  background: $black !important;
+}
+
+.orange-projects {
+  height: auto;
+  width: calc(100vw - 10rem);
+  padding: $space-1 4rem 0 $space-1;
+  border-top: 1px solid $black;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.large {
+  flex-basis: calc(50% - #{$gutter} / 2);
+}
+
+.small {
+  flex-basis: calc(33.33% - #{$gutter} / 2);
+}
+
+.push {
+ margin: 0 calc(8.333% - #{$gutter} / 2);
+}
+
+
+.orange-thumb {
+  margin-bottom: $space-2;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orange-thumb li {
+  padding-bottom: 1rem;
+}
+
+.orange-thumb li:nth-child(1),
+.orange-thumb li:nth-child(2) {
+  font: $details;
+}
+
+.orange-thumb li:nth-child(4),
+.orange-thumb li:nth-child(5) {
+  font: $h2;
+}
+
+.orange-thumb li:nth-child(1),
+.orange-thumb li:nth-child(4) {
+  min-width: 7rem;
+}
+
+.large li:nth-child(1),
+.large li:nth-child(4) {
+  flex-basis: 16.5%;
+}
+
+.small li:nth-child(1),
+.small li:nth-child(4) {
+  flex-basis: 25%;
+}
+
+.orange-thumb img{
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+
+.orange-thumb img:hover{
+  filter: grayscale(0%);
+  mix-blend-mode: normal;
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -51,8 +52,7 @@ strong {
 
 a,
 button {
-  color: inherit;
-  /* transition: .1s; */ }
+  color: inherit; }
 
 a {
   text-decoration: none; }
@@ -76,58 +76,153 @@ button {
   outline: 0; }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border: 0;
   vertical-align: middle; }
 
 @font-face {
-  font-family: 'GT America';
+  font-family: 'GT Merica';
   src: url("../font/GTAmerica-Regular.eot");
   src: url("../font/GTAmerica-Regular.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-Regular.woff") format("woff"), url("../font/GTAmerica-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'GT America Expanded';
+  font-family: 'GT Merica Medium';
+  src: url("../font/GTAmerica-Medium.eot");
+  src: url("../font/GTAmerica-Medium.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-Medium.woff") format("woff"), url("../font/GTAmerica-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT Merica Bold';
+  src: url("../font/GTAmerica-Bold.eot");
+  src: url("../font/GTAmerica-Bold.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-Bold.woff") format("woff"), url("../font/GTAmerica-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT Merica Expanded';
   src: url("../font/GTAmerica-ExpandedBold.eot");
   src: url("../font/GTAmerica-ExpandedBold.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-ExpandedBold.woff") format("woff"), url("../font/GTAmerica-ExpandedBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'GT America Mono';
+  font-family: 'GT Merica Mono';
   src: url("../font/GTAmericaMono-Regular.eot");
   src: url("../font/GTAmericaMono-Regular.eot?#iefix") format("embedded-opentype"), url("../font/GTAmericaMono-Regular.woff") format("woff"), url("../font/GTAmericaMono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'GT Merica Compressed';
+  src: url("../font/GTAmerica-CompressedMedium.eot");
+  src: url("../font/GTAmerica-CompressedMedium.eot?#iefix") format("embedded-opentype"), url("../font/GTAmerica-CompressedMedium.woff") format("woff"), url("../font/GTAmerica-CompressedMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  background: #0f0f14;
-  font: 2rem/2.6rem "GT America", sans-serif;
-  overflow: hidden; }
+  background: #0f0f0f;
+  font: 2.2rem/2.6rem "GT Merica", sans-serif;
+  -webkit-font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1;
+          font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  cursor: url(../img/cursor.png), auto;
+  -webkit-overflow-scrolling: touch; }
+
+::-moz-selection {
+  color: #fff;
+  background: red; }
+
+::selection {
+  color: #fff;
+  background: red; }
 
 h1 {
-  font: 2rem/2.6rem "GT America", sans-serif;
+  font: 2.2rem/2.6rem "GT Merica", sans-serif;
   text-indent: 9rem;
   margin-top: -0.5rem; }
 
 h2 {
-  font: 3rem/3.6rem "GT America", sans-serif;
-  margin-bottom: 6rem; }
+  font: 3.4rem/3.7rem "GT Merica", sans-serif; }
 
 h3 {
-  font: 2rem/2.6rem "GT America", sans-serif;
+  font: 2.2rem/2.6rem "GT Merica", sans-serif;
   text-indent: 9rem;
   margin-top: -0.5rem; }
 
 p {
-  font: 2rem/2.6rem "GT America", sans-serif;
+  font: 2.2rem/2.6rem "GT Merica", sans-serif;
   margin-top: -0.5rem;
   margin-bottom: 3rem; }
 
 h4 {
-  font: 1.5rem/2rem "GT America", sans-serif; }
+  font: 1.5rem/1.8rem "GT Merica Mono", monospace; }
+
+.indent {
+  text-indent: 9rem; }
+
+/*
+u {
+  text-decoration: red underline;
+  text-decoration-skip: ink;
+  }
+*/
+u {
+  text-decoration: none;
+  border-bottom: 2px solid red;
+  text-shadow: 3px 3px #fff, 3px -3px #fff, -3px 3px #fff, -3px -3px #fff; }
+
+header {
+  position: absolute;
+  padding: 2rem 4rem 0 3rem;
+  width: calc(100vw - 10rem);
+  line-height: 1rem;
+  top: 0;
+  z-index: 2; }
+
+.nav-up {
+  top: -6rem; }
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+header ul li {
+  -ms-flex-preferred-size: calc(33.333% - 1.333rem);
+      flex-basis: calc(33.333% - 1.333rem); }
+
+.header-title a {
+  font-family: "GT Merica Mono", monospace; }
+
+.header-selected {
+  margin-left: 4rem; }
+
+.header-selected div {
+  height: 1rem;
+  width: 1rem;
+  font-family: "GT Merica Mono", monospace;
+  margin: 0 0 -1rem -2rem; }
+
+.header-selected a:hover > div {
+  margin-left: -1.7rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+/********** HEADER TRANSITIONS **********/
+.header-selected div {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 
 #sliders {
   float: right; }
@@ -137,84 +232,1293 @@ h4 {
 #archive {
   position: fixed;
   height: 100vh;
-  overflow-y: auto; }
-
-#archive {
-  background: gainsboro;
-  z-index: 2; }
-
-#project {
-  width: 80%;
-  background: #fff;
-  z-index: 3; }
-
-#info {
-  background: #1e1e23;
-  color: #fff;
-  z-index: 4;
+  overflow-y: auto;
+  border-left: 1px solid #0f0f0f;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+#archive {
+  background: #fff;
+  z-index: 2;
+  top: 0;
+  right: calc(-75% + 10rem);
+  overflow: visible; }
+
+#project {
+  width: 85%;
+  background: #fff;
+  z-index: 3;
+  top: 0;
+  right: calc(-85% + 0rem); }
+
+#info {
+  background: #fff;
+  color: #0f0f0f;
+  z-index: 4;
+  top: 0;
+  right: calc(-75% + 5rem); }
+
+#info,
+#archive {
+  width: 75%; }
 
 .info-open,
-.info-closed,
-.archive-open,
-.archive-closed {
-  width: 62.5%; }
-
-.info-open {
-  right: 0; }
-
-.info-closed {
-  right: calc(-62.5% + 5rem); }
-
 .archive-open,
 .project-open {
-  right: 0; }
-
-.archive-closed {
-  right: calc(-62.5% + 10rem); }
+  right: 0 !important; }
 
 .project-closed {
-  right: -80%; }
+  right: -85%; }
+
+.archive-open-more {
+  right: 5rem !important; }
+
+.archive-open-most {
+  right: calc(85% - 75% + 5rem) !important; }
 
 .archive-project-open {
-  width: calc(80% + 5rem);
-  right: 0; }
+  width: calc(85% + 5rem);
+  right: 0 !important; }
 
 .strip {
   width: 5rem;
   height: 100%;
-  background: url("../img/favi.ico") 1.25rem 3rem no-repeat;
-  background-size: 2.5rem; }
+  cursor: w-resize;
+  position: absolute;
+  padding: 1rem 0 0 0rem; }
 
-.main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.sideways {
+  height: 2rem;
+  width: 20rem;
+  overflow: visible;
+  -webkit-transform: rotate(90deg) translateY(7rem) translateX(10rem);
+          transform: rotate(90deg) translateY(7rem) translateX(10rem);
+  font-family: "GT Merica Mono", monospace;
+  font-size: 1.5rem; }
+
+.sideways span {
+  text-transform: uppercase; }
+
+.sideways span:after {
+  content: "\2193";
+  padding-left: 0.5rem; }
+
+.cursor {
+  cursor: e-resize; }
+
+.project-loadspot {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  opacity: 0; }
+
+.opacity {
+  opacity: 1; }
+
+.scroll {
   height: 100%;
-  padding: 3rem 3rem 3rem 2rem;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/*! Flickity v2.0.9
+http://flickity.metafizzy.co
+---------------------------------------------- */
+.flickity-enabled {
+  position: relative; }
+
+.flickity-enabled:focus {
+  outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 80vh; }
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+/* draggable */
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+/* ---- previous/next buttons ---- */
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.flickity-prev-next-button:hover {
+  background: white; }
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 5px #09F;
+          box-shadow: 0 0 0 5px #09F; }
+
+.flickity-prev-next-button:active {
+  opacity: 0.6; }
+
+.flickity-prev-next-button.previous {
+  left: 10px; }
+
+.flickity-prev-next-button.next {
+  right: 10px; }
+
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px; }
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px; }
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto; }
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%; }
+
+.flickity-prev-next-button .arrow {
+  fill: #333; }
+
+/* ---- page dots ---- */
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1; }
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer; }
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1; }
+
+.photoroller {
+  position: relative; }
+  .photoroller .pr-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    visibility: hidden; }
+    .photoroller .pr-img img {
+      display: block; }
+  .photoroller .pr-active {
+    position: static;
+    display: block;
+    visibility: visible; }
+
+#image-index {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #fff; }
+
+#index-hero {
+  width: 100vw;
+  padding: 6rem 0 12rem 0;
+  will-change: opacity; }
+
+#index-hero section {
+  min-height: calc(50vw - 12rem);
+  margin: 12rem 0 0 3rem;
+  width: calc(100vw - 17rem); }
+
+.whiteform {
+  background-image: url(../img/FORM.svg);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.blackform {
+  background-image: url(../img/FORM_black.svg);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.main-carousel {
+  padding: 2rem 0 2rem 0;
+  border-top: 1px solid #0f0f0f; }
+
+.main-carousel img {
+  width: 65vw;
+  margin-right: 6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden; }
+
+.carousel-caption {
+  position: absolute;
+  width: calc(100vw - 17rem);
+  margin: 1rem 0 0 3rem;
+  z-index: 1;
+  color: #0f0f0f; }
+
+.carousel-link {
+  float: right; }
+
+li.carousel-link:after {
+  content: " ←";
+  font-family: "GT Merica Mono", monospace; }
+
+li.caption:before {
+  font-family: "GT Merica Mono", monospace; }
+
+.carousel-status {
+  font-family: "GT Merica Mono", monospace; }
+
+#index-projects {
+  height: auto;
+  width: calc(100vw - 10rem);
+  padding: 6rem 4rem 0 3rem;
+  border-top: 1px solid #0f0f0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.project-thumb {
+  -ms-flex-preferred-size: calc(33.333% - 1.333rem);
+      flex-basis: calc(33.333% - 1.333rem);
+  margin-bottom: 6rem;
+  height: 100%;
+  cursor: cell;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  z-index: 0; }
+
+.project-thumb:hover:before {
+  -webkit-transform: translate3d(1rem, 1rem, 0);
+          transform: translate3d(1rem, 1rem, 0); }
+
+.project-thumb ul:after {
+  content: "View project  →";
+  opacity: 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem); }
+
+/*
+.project-thumb ul:hover:after  {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+*/
+.project-thumb:hover > ul:after {
+  opacity: 1;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem); }
+
+.project-thumb ul,
+.related-project ul {
+  padding: 0.5rem 0 2rem 0;
+  font: 1.5rem/1.8rem "GT Merica Mono", monospace;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.project-thumb ul li,
+.related-project ul li {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
+
+.project-thumb ul li:nth-child(3),
+.related-project ul li:nth-child(3) {
+  margin-left: 50%; }
+
+.project-thumb ul {
+  background: #fff; }
+
+.closer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none; }
+
+.blur {
+  opacity: 0.1; }
+
+.show {
+  display: block; }
+
+.overflow {
+  overflow: hidden !important;
+  background: #0f0f0f; }
+
+#info-button,
+#archive-button,
+#project-button {
+  display: none; }
+
+.black {
+  color: #fff !important;
+  background: #0f0f0f !important; }
+
+.white {
+  color: #0f0f0f !important;
+  background: #fff !important; }
+
+.left-border {
+  border-left: 1px solid #232323 !important; }
+
+.bottom-border {
+  border-bottom: 1px solid #232323 !important; }
+
+.bottom-border:hover:not(:nth-child(1)) {
+  border-bottom: 2px solid #232323 !important; }
+
+.big-type {
+  border-top: 1px solid #232323;
+  padding: 2rem 0 2rem 0;
+  font-family: "GT Merica Bold", sans-serif;
+  font-size: 12rem;
+  line-height: 11rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0f0f0f;
+  text-shadow: 1px 1px #fff, 1px -1px #fff, -1px 1px #fff, -1px -1px #fff; }
+
+.big-type li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 12rem 1rem 3rem;
+  border-bottom: 1px solid #232323;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease; }
+
+.big-type li span {
+  -ms-flex-preferred-size: calc(33.333% - 2rem);
+      flex-basis: calc(33.333% - 2rem);
+  margin-right: 2rem; }
+
+.big-type li a {
+  -ms-flex-preferred-size: 66.666%;
+      flex-basis: 66.666%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.big-type li:hover {
+  color: #fff;
+  text-shadow: none; }
+
+.big-type li span:after {
+  content: ""; }
+
+.big-type li img {
+  position: absolute;
+  width: calc(33.333% - 10rem);
+  z-index: 1;
+  right: 12rem;
+  -webkit-transform: translate(0, -30%);
+          transform: translate(0, -30%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.big-type li:hover > img {
+  width: calc(33.333% - 6rem);
+  visibility: visible;
+  opacity: 1; }
+
+/*
+sup {
+  font-family: $gt-mono;
+  font-size: 2.5rem;
+  position: relative;
+  top: -1.2em;
+  left: .7rem;
+  color: $white;
+  word-break: break-all;
+  text-shadow: none;
+  letter-spacing: 0;
+}
+
+sup:before {
+  content: "[";
+}
+
+sup:after {
+  content: "]";
+}
+
+*/
+.main {
+  padding: 3rem 0 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
-      align-content: flex-start; }
+      align-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .intro {
-  padding-right: calc(33% + 2rem); }
+  padding-right: 45%;
+  margin-left: 6rem;
+  margin-bottom: 6rem; }
 
 .text {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  margin-right: 2rem;
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  padding-left: 6rem;
+  margin-bottom: 9rem;
   -ms-flex-item-align: start;
       align-self: flex-start; }
 
 .contact {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  font: 1.5rem/1.8rem "GT Merica Mono", monospace;
+  text-transform: uppercase;
+  padding: 0 6rem 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+aside div {
+  padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+aside div h4 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font: 1.5rem/2rem "GT America", sans-serif; }
+  padding-right: 3rem; }
+
+aside div ul {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3; }
+
+aside div ul li:nth-child(3n) {
+  padding-bottom: 1rem; }
+
+.table {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-bottom: 9rem;
+  margin-left: 6rem;
+  will-change: opacity; }
+
+.columns:nth-child(1) {
+  font-family: "GT Merica Mono", monospace;
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 1.5rem; }
+
+.columns {
+  position: relative;
+  border-bottom: 0.1rem solid #0f0f0f;
+  text-transform: uppercase; }
+
+.columns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 6rem; }
+
+.columns li {
+  padding: 0.8rem 2rem 1rem 0; }
+
+.columns li:nth-child(1) {
+  -ms-flex-preferred-size: 9rem;
+      flex-basis: 9rem; }
+
+.columns li:nth-child(2) {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%; }
+
+.columns li:nth-child(3) {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%; }
+
+.columns li:nth-child(4) {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%; }
+
+.columns img {
+  display: none; }
+
+.columns:hover:not(:nth-child(1)) {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  border-bottom: 2px solid #0f0f0f;
+  margin-bottom: -1px; }
+
+.columns a:hover {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in; }
+
+.columns a ul li:nth-child(1):before {
+  content: "\2192";
+  position: absolute;
+  opacity: 0; }
+
+.columns:hover > a ul li:nth-child(1):before {
+  opacity: 1;
+  margin-left: -2.5rem; }
+
+.columns:hover > a ul li:nth-child(1) {
+  padding-left: 2.25rem; }
+
+/********** ARCHIVE TRANSITIONS **********/
+.columns li:nth-child(1),
+.columns a ul li:nth-child(1):before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+/*
+.columns a ul li:nth-child(1):before {
+  content: "";
+  float: left;
+  background-color: #000;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-right: 4px;
+  margin-top: 7px;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+*/
+.hero-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 3rem; }
+
+.details {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  font: 1.5rem/1.8rem "GT Merica Mono", monospace;
+  text-transform: uppercase;
+  padding: 0 6rem 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.details ul {
+  padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.details ul li:nth-child(1n) {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%; }
+
+.details ul li:nth-child(2n) {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%; }
+
+.project-gallery {
+  margin: 0 6rem 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.project-gallery div {
+  margin-bottom: 2rem; }
+
+.img-full {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+
+.img-left,
+.img-right,
+.img-left-solo,
+.img-right-solo {
+  -ms-flex-preferred-size: calc(50% - 2rem / 2);
+      flex-basis: calc(50% - 2rem / 2); }
+
+.img-left {
+  margin-right: 2rem; }
+
+.img-left-solo {
+  margin-right: calc(50% - 2rem / 2); }
+
+.img-right-solo {
+  margin-left: calc(50% + 2rem / 2); }
+
+.project-carousel {
+  width: 100%;
+  margin: 0 0 2rem 6rem; }
+
+.project-carousel div {
+  margin-bottom: 0 !important; }
+
+.project-carousel img {
+  width: 37.5%;
+  margin-right: 2rem; }
+
+.related-carousel {
+  width: 100%;
+  border-top: 1px solid #232323;
+  margin-top: 12rem;
+  padding: 3rem 3rem 9rem 0; }
+
+.related-carousel img {
+  width: 100%; }
+
+.related-project {
+  padding-left: 2rem;
+  width: 27.5%; }
+
+.related-project:last-child {
+  width: calc(27.5% + 2rem);
+  padding-right: 2rem; }
+
+.related-project:hover {
+  -webkit-transform: scale(0.985, 0.985);
+          transform: scale(0.985, 0.985); }
+
+.related-project:hover > a ul:after {
+  opacity: 1;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem); }
+
+.related-project ul {
+  padding-bottom: 6rem; }
+
+.related-project ul:after {
+  content: "View project  →";
+  opacity: 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem); }
+
+.digital {
+  padding: 3rem;
+  background-color: black; }
+
+.orange-red {
+  color: #0f0f0f !important;
+  background: #fa5f32 !important; }
+
+.orange-red-inverse {
+  color: #fa5f32 !important;
+  background: #0f0f0f !important; }
+
+.orange-projects {
+  height: auto;
+  width: calc(100vw - 10rem);
+  padding: 3rem 4rem 0 3rem;
+  border-top: 1px solid #0f0f0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.large {
+  -ms-flex-preferred-size: calc(50% - 2rem / 2);
+      flex-basis: calc(50% - 2rem / 2); }
+
+.small {
+  -ms-flex-preferred-size: calc(33.33% - 2rem / 2);
+      flex-basis: calc(33.33% - 2rem / 2); }
+
+.push {
+  margin: 0 calc(8.333% - 2rem / 2); }
+
+.orange-thumb {
+  margin-bottom: 6rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.orange-thumb li {
+  padding-bottom: 1rem; }
+
+.orange-thumb li:nth-child(1),
+.orange-thumb li:nth-child(2) {
+  font: 1.5rem/1.8rem "GT Merica Mono", monospace; }
+
+.orange-thumb li:nth-child(4),
+.orange-thumb li:nth-child(5) {
+  font: 3.4rem/3.7rem "GT Merica", sans-serif; }
+
+.orange-thumb li:nth-child(1),
+.orange-thumb li:nth-child(4) {
+  min-width: 7rem; }
+
+.large li:nth-child(1),
+.large li:nth-child(4) {
+  -ms-flex-preferred-size: 16.5%;
+      flex-basis: 16.5%; }
+
+.small li:nth-child(1),
+.small li:nth-child(4) {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%; }
+
+.orange-thumb img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  mix-blend-mode: multiply; }
+
+.orange-thumb img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  mix-blend-mode: normal; }
+
+@media only screen and (min-width: 1600px) {
+  body {
+    font-size: 2.6rem;
+    line-height: 3.2rem; }
+  h1,
+  h3,
+  p {
+    font-size: 2.6rem;
+    line-height: 3.2rem; }
+  h2 {
+    font-size: 4rem;
+    line-height: 4.8rem; }
+  .details,
+  .contact,
+  .sideways span,
+  .project-thumb ul,
+  .related-project ul,
+  .orange-thumb li:nth-child(1),
+  .orange-thumb li:nth-child(2),
+  .columns:nth-child(1),
+  h4 {
+    font-size: 1.8rem;
+    line-height: 2.2rem; } }
+
+@media only screen and (max-width: 1200px) {
+  /* Header ----------- */
+  header ul li {
+    -ms-flex-preferred-size: calc(25% - 1.333rem);
+        flex-basis: calc(25% - 1.333rem); }
+  li.header-selected {
+    -ms-flex-preferred-size: calc(25% - 1.333rem);
+        flex-basis: calc(25% - 1.333rem); }
+  li.header-contact {
+    -ms-flex-preferred-size: calc(50% - 1.333rem);
+        flex-basis: calc(50% - 1.333rem); }
+  /* Sliders ----------- */
+  #info,
+  #archive {
+    width: calc(90% - 5rem); }
+  #info {
+    right: calc(-90% + 10rem); }
+  #archive {
+    right: calc(-90% + 15rem); }
+  #project {
+    width: 90%;
+    right: -90%; }
+  /* Archive ----------- */
+  .columns img {
+    margin: -12rem 0 0 40%; }
+  .columns a ul li:nth-child(1):before {
+    content: "\2192\00a0"; } }
+
+@media only screen and (max-width: 1024px) {
+  /* Big Type ----------- */
+  .big-type {
+    font-size: 9rem;
+    line-height: 9rem; }
+  .big-type li span {
+    -ms-flex-preferred-size: calc(25% - 2rem);
+        flex-basis: calc(25% - 2rem); }
+  .big-type li a {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%; }
+  /* Orange Projects ----------- */
+  .large {
+    -ms-flex-preferred-size: calc(50% - 2rem / 2);
+        flex-basis: calc(50% - 2rem / 2); }
+  .small {
+    -ms-flex-preferred-size: calc(40% - 2rem / 2);
+        flex-basis: calc(40% - 2rem / 2); }
+  .push {
+    margin-left: calc(5% - 2rem / 2);
+    margin-right: calc(5% - 2rem / 2); }
+  /* Sliders ----------- */
+  #info,
+  #archive {
+    width: calc(100% - 5rem); }
+  #info {
+    right: calc(-100% + 10rem); }
+  #archive {
+    right: calc(-100% + 15rem); }
+  #project {
+    width: 100%;
+    right: -100%; }
+  .main-carousel img {
+    width: 75vw;
+    margin-right: 2rem; }
+  .carousel-cell {
+    width: 75vw; }
+  /* Big Type ----------- */
+  .big-type li img {
+    width: calc(50% - 10rem);
+    -webkit-transform: translate(0, -15%);
+            transform: translate(0, -15%); }
+  .big-type li:hover > img {
+    width: calc(50% - 7.5rem); } }
+
+@media only screen and (max-width: 950px) {
+  /* Header ----------- */
+  header ul li {
+    -ms-flex-preferred-size: calc(25% - 1.333rem);
+        flex-basis: calc(25% - 1.333rem);
+    padding-bottom: 1rem; }
+  li.header-selected {
+    display: none;
+    -ms-flex-preferred-size: calc(65% - 1.333rem);
+        flex-basis: calc(65% - 1.333rem);
+    margin-left: auto; }
+  li.header-contact {
+    -ms-flex-preferred-size: calc(75% - 1.333rem);
+        flex-basis: calc(75% - 1.333rem);
+    margin-left: auto; }
+  /* Image Index -------- */
+  #index-hero section {
+    min-height: calc(50vw - 9rem); }
+  /* Info ----------- */
+  .intro {
+    padding-right: 10%;
+    margin-bottom: 3rem; }
+  .text {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    margin-bottom: 0; }
+  .contact, .details {
+    margin-top: 2rem;
+    margin-bottom: 9rem;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row; }
+  .details ul {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -ms-flex-line-pack: start;
+        align-content: flex-start; }
+  aside div {
+    margin: 0 2rem 6rem 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; }
+  /* Project overview ----------- */
+  #index-projects ul {
+    -ms-flex-preferred-size: calc(50% - 1rem);
+        flex-basis: calc(50% - 1rem); }
+  /* Archive----------- */
+  .table {
+    margin-top: 6rem; }
+  .columns li:nth-child(1) {
+    -ms-flex-preferred-size: 9rem;
+        flex-basis: 9rem; }
+  .columns li:nth-child(2) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; }
+  .columns li:nth-child(3) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; }
+  .columns li:nth-child(4) {
+    display: none; }
+  /* Orange Projects ----------- */
+  .orange-projects {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .large {
+    -ms-flex-preferred-size: calc(50% - 2rem / 2);
+        flex-basis: calc(50% - 2rem / 2); }
+  .small {
+    -ms-flex-preferred-size: calc(50% - 2rem / 2);
+        flex-basis: calc(50% - 2rem / 2); }
+  .push {
+    margin-left: 0;
+    margin-right: 0; }
+  .orange-thumb li:nth-child(4),
+  .orange-thumb li:nth-child(5) {
+    font: 2.2rem/2.6rem "GT Merica", sans-serif; }
+  /* Project page ----------- */
+  .hero-image {
+    margin: 0; } }
+
+@media only screen and (max-width: 769px) {
+  /* Info ----------- */
+  .intro,
+  .contact {
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+    padding-right: 3rem; }
+  .text {
+    padding-bottom: 3rem; }
+  .contact, .details {
+    margin: 0 0 6rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column; }
+  .details {
+    padding-right: 6rem; }
+  .details ul {
+    padding-bottom: 0; }
+  /* Project page ----------- */
+  .project-carousel img,
+  .related-project {
+    width: 60%; }
+  .related-project:last-child {
+    width: calc(60% + 2rem);
+    padding-right: 2rem; }
+  .digital {
+    padding: 3rem;
+    background-color: #0f0f0f; }
+  .text {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .details {
+    margin-bottom: 12rem; }
+  /* Big Type ----------- */
+  .big-type {
+    font-size: 6rem;
+    line-height: 6rem;
+    color: #fff;
+    text-shadow: none; } }
+
+@media only screen and (max-width: 650px) {
+  body {
+    font-size: 1.6rem;
+    line-height: 2rem; }
+  h1 {
+    font-size: 1.6rem;
+    text-indent: 6rem;
+    margin-top: -0.5rem; }
+  h2 {
+    font-size: 2.6rem;
+    line-height: 3rem; }
+  h3 {
+    font-size: 1.6rem;
+    text-indent: 6rem;
+    margin-top: -0.5rem; }
+  p {
+    font-size: 1.6rem;
+    line-height: 2rem; }
+  h4 {
+    font-size: 1.3rem; }
+  .indent {
+    text-indent: 6rem; }
+  .details,
+  .contact,
+  .sideways p,
+  .project-thumb ul,
+  .related-project ul,
+  .columns:nth-child(1),
+  .sideways {
+    font-size: 1.3rem; }
+  /* Header ----------- */
+  header ul li {
+    -ms-flex-preferred-size: calc(15% - 1.333rem);
+        flex-basis: calc(15% - 1.333rem); }
+  li.header-selected {
+    -ms-flex-preferred-size: calc(70% - 1.333rem);
+        flex-basis: calc(70% - 1.333rem); }
+  /* Project overview ----------- */
+  #index-projects ul {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
+  #index-hero section {
+    height: 20rem; }
+  /* Image Index -------- */
+  .project-thumb {
+    margin-bottom: 2rem; }
+  /* Info ----------- */
+  .intro,
+  .text,
+  .contact {
+    margin-bottom: 3rem; }
+  .text {
+    margin-bottom: 0; }
+  .contact, .details {
+    margin: 0 0 9rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column; }
+  .details {
+    padding-right: 6rem; }
+  .details ul {
+    padding-bottom: 0; }
+  /* Project page ----------- */
+  .digital {
+    padding: 2rem;
+    background-color: black; }
+  .img-left,
+  .img-right,
+  .img-left-solo,
+  .img-right-solo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0; }
+  /* Archive ----------- */
+  .columns img {
+    right: 5rem;
+    margin: -12.5rem 0 0 .6rem; }
+  .columns a ul li:nth-child(1):before {
+    content: "\2192\00a0"; }
+  .columns li:nth-child(1) {
+    -ms-flex-preferred-size: 6rem;
+        flex-basis: 6rem; }
+  /* Big Type ----------- */
+  .big-type {
+    font-size: 3rem;
+    line-height: 3rem; }
+  /* Orange Projects ----------- */
+  .large {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
+  .small {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
+
+@media only screen and (max-width: 500px) {
+  /* Header ----------- */
+  header ul li,
+  li.header-contact {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
+  #index-hero {
+    width: auto;
+    margin: 0; }
+  header {
+    width: auto;
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  #index-hero section {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 20rem;
+    width: auto; }
+  /* Sliders ----------- */
+  #info,
+  #archive,
+  #project {
+    width: 100%; }
+  #info {
+    right: calc(-90% - 5rem); }
+  #archive {
+    right: calc(-90% - 5rem); }
+  #info-button,
+  #archive-button,
+  #project-button {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    font: 1.5rem/1.8rem "GT Merica Mono", monospace;
+    -webkit-transform: rotate(90deg) translateY(0rem) translateX(0rem);
+            transform: rotate(90deg) translateY(0rem) translateX(0rem);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: #0f0f0f;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  #info-button p,
+  #archive-button p,
+  #project-button p {
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0; }
+  #info-button {
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 5; }
+  #archive-button {
+    bottom: 8rem;
+    right: 1rem;
+    z-index: 3; }
+  #project-button {
+    bottom: 8rem;
+    right: -6rem;
+    z-index: 100;
+    -webkit-transform: rotate(0deg) translateY(0rem) translateX(0rem) !important;
+            transform: rotate(0deg) translateY(0rem) translateX(0rem) !important; }
+  .show-button {
+    right: 1rem !important;
+    -webkit-transform: rotate(90deg) translateY(0rem) translateX(0rem);
+            transform: rotate(90deg) translateY(0rem) translateX(0rem); }
+  .rotate-close {
+    -webkit-transform: rotate(0deg) translateY(0rem) translateX(0rem) !important;
+            transform: rotate(0deg) translateY(0rem) translateX(0rem) !important;
+    content: "Close"; }
+  /* Information ----------- */
+  .intro,
+  .text,
+  .contact,
+  .details {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    padding-right: 2rem;
+    padding-left: 2rem; }
+  .text {
+    margin-top: 3rem; }
+  .details {
+    margin-bottom: 6rem; }
+  /* Archive page----------- */
+  .table {
+    margin: 0;
+    margin-top: 6rem; }
+  .columns {
+    padding-left: 2rem; }
+  .columns ul {
+    margin-right: 2rem; }
+  /* Project page----------- */
+  .strip {
+    display: none; }
+  .project-gallery {
+    margin: 0 2rem; }
+  .project-carousel {
+    margin-left: 2rem; }
+  .related-carousel {
+    padding-right: 0; }
+  /* Image index ----------- */
+  #index-projects {
+    width: auto;
+    padding: 3rem 2rem 0 2rem; }
+  /* Big Type ----------- */
+  .big-type {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 0 0 1rem 0; }
+  .big-type li {
+    padding: 1rem 2rem 1rem 2rem; }
+  .big-type li:hover {
+    color: gainsboro; }
+  .big-type li img {
+    display: none; }
+  /* Orange Type ----------- */
+  .orange-projects {
+    width: auto;
+    padding: 3rem 2rem 0 2rem; } }
